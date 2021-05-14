@@ -8,20 +8,20 @@ todoButton.addEventListener('click', addTodo);
 
 
 // Functions
-function addTodo(event){
+function addTodo(event) {
   //prevent form from submitting
   event.preventDefault();
   // To Do Div
-  const toDoDiv = document.createElement('div');
-  todoDiv.classList.add('todo');
+  const todoDiv = document.createElement("div");
+  todoDiv.classList.add("todo");
   // create LI
-  const newTodo = document.createElement('li');
-  newTodo.innerText = 'hey';
-  newTodo.classList.add('todo-item');
+  const newTodo = document.createElement("li");
+  newTodo.innerText = todoInput.value;
+  newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
 
   //completed mark button
-  const completedButton = document.createElement('button');
+  const completedButton = document.createElement("button");
   completedButton.innerHTML = '<i class="fas fa-check"></i>';
   completedButton.classList.add("complete-btn");
   todoDiv.appendChild(completedButton);
@@ -31,4 +31,8 @@ function addTodo(event){
   trashButton.innerHTML = '<i class="fas fa-trash"></i>';
   trashButton.classList.add("trash-btn");
   todoDiv.appendChild(trashButton);
+  // Append To List
+  todoList.appendChild(todoDiv);
+  //Clear todo Input Value
+  todoInput.value = "";
 }
