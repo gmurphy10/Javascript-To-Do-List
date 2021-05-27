@@ -19,12 +19,19 @@
         <button class="todo-button" type="submit">
             <i class="fa fa-plus-square"></i>
         </button>
+        <div class="select">
+          <select name="todos" id="filter-todo">
+            <option value="all">All</option>
+            <option value="all">Marked</option>
+            <option value="all">Uncompleted</option>
+          </select>
+        </div>
     </form>
     <div class="todo-container">
       <ul class="todo-list">
       </ul>
     </div>
 
-  <script src="./app.js"></script>
+  <script src="./app.js" defer></script>
 </body>
 </html>
